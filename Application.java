@@ -8,6 +8,12 @@ public class CreateWebSource
     {
       if ( args == null || args.length != 4 )
       {
+       #feature202 change by sathvi 
+	   / Get stateless web service client
+        AdminPortType adminPort = 
+          getStatelessWebServiceClient( webServiceURL );
+      
+=======
        #fe        // Get web service URL from command-line arguments
         String webServiceURL = args[0];
         System.out.println( "Using web service URL \"" + webServiceURL + "\"\n" ); 
